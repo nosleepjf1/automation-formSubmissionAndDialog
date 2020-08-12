@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.4 on darwin)" generated="20200728 13:49:10.200" rpa="false">
+<suite id="s1" name="Index" source="/Users/jonnyfewkes/PycharmProjects/CourseChallenge/tests/Index.robot">
+<test id="s1-t1" name="User can view the home page">
+<kw name="Begin Web Test" library="CommonKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:10.529" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200728 13:49:10.529" endtime="20200728 13:49:13.103"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200728 13:49:13.104" endtime="20200728 13:49:13.244"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:10.528" endtime="20200728 13:49:13.245"></status>
+</kw>
+<kw name="Get Selection From User" library="Dialogs">
+<doc>Pauses test execution and asks user to select a value.</doc>
+<arguments>
+<arg>Which browser?</arg>
+<arg>chrome</arg>
+<arg>firefox</arg>
+<arg>safari</arg>
+</arguments>
+<assign>
+<var>${new_browser}</var>
+</assign>
+<msg timestamp="20200728 13:49:17.702" level="INFO">${new_browser} = safari</msg>
+<status status="PASS" starttime="20200728 13:49:13.246" endtime="20200728 13:49:17.702"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${BROWSER}</arg>
+<arg>${new_browser}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:17.703" level="INFO">${BROWSER} = safari</msg>
+<status status="PASS" starttime="20200728 13:49:17.703" endtime="20200728 13:49:17.703"></status>
+</kw>
+<kw name="Open home page" library="IndexKeywords">
+<tags>
+<tag>Smoke</tag>
+</tags>
+<kw name="Open Web Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:17.705" level="INFO">Opening url 'http://www.robotframeworktutorial.com/'</msg>
+<status status="PASS" starttime="20200728 13:49:17.704" endtime="20200728 13:49:18.847"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:17.704" endtime="20200728 13:49:18.848"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contact</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:18.849" endtime="20200728 13:49:18.925"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:18.848" endtime="20200728 13:49:18.925"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:17.704" endtime="20200728 13:49:18.926"></status>
+</kw>
+<kw name="End Web Test" library="CommonKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 13:49:18.927" endtime="20200728 13:49:19.064"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:18.926" endtime="20200728 13:49:19.064"></status>
+</kw>
+<tags>
+<tag>Basic</tag>
+</tags>
+<status status="PASS" starttime="20200728 13:49:10.527" endtime="20200728 13:49:19.064" critical="yes"></status>
+</test>
+<test id="s1-t2" name="User can navigate to the contact page">
+<kw name="Begin Web Test" library="CommonKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:19.067" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200728 13:49:19.067" endtime="20200728 13:49:20.779"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200728 13:49:20.780" endtime="20200728 13:49:21.060"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:19.066" endtime="20200728 13:49:21.060"></status>
+</kw>
+<kw name="Open home page" library="IndexKeywords">
+<tags>
+<tag>Smoke</tag>
+</tags>
+<kw name="Open Web Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:21.062" level="INFO">Opening url 'http://www.robotframeworktutorial.com/'</msg>
+<status status="PASS" starttime="20200728 13:49:21.062" endtime="20200728 13:49:24.381"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:21.061" endtime="20200728 13:49:24.382"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contact</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:24.382" endtime="20200728 13:49:24.398"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:24.382" endtime="20200728 13:49:24.399"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:21.060" endtime="20200728 13:49:24.399"></status>
+</kw>
+<kw name="Open contact page" library="IndexKeywords">
+<kw name="Click Contact Link" library="LandingPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>css:li#menu-item-2057 a</arg>
+</arguments>
+<msg timestamp="20200728 13:49:24.401" level="INFO">Clicking link 'css:li#menu-item-2057 a'.</msg>
+<status status="PASS" starttime="20200728 13:49:24.401" endtime="20200728 13:49:24.499"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:24.400" endtime="20200728 13:49:24.499"></status>
+</kw>
+<kw name="Verify Page Loaded" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Email Address</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:24.500" endtime="20200728 13:49:24.766"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:24.500" endtime="20200728 13:49:24.767"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:24.400" endtime="20200728 13:49:24.767"></status>
+</kw>
+<kw name="End Web Test" library="CommonKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 13:49:24.768" endtime="20200728 13:49:24.783"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:24.767" endtime="20200728 13:49:24.784"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:19.065" endtime="20200728 13:49:24.785" critical="yes"></status>
+</test>
+<test id="s1-t3" name="User can enter all form info in contact form">
+<kw name="Begin Web Test" library="CommonKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:24.789" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200728 13:49:24.789" endtime="20200728 13:49:26.505"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200728 13:49:26.505" endtime="20200728 13:49:26.536"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:24.788" endtime="20200728 13:49:26.536"></status>
+</kw>
+<kw name="Open home page" library="IndexKeywords">
+<tags>
+<tag>Smoke</tag>
+</tags>
+<kw name="Open Web Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:26.538" level="INFO">Opening url 'http://www.robotframeworktutorial.com/'</msg>
+<status status="PASS" starttime="20200728 13:49:26.538" endtime="20200728 13:49:29.091"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:26.537" endtime="20200728 13:49:29.092"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contact</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:29.093" endtime="20200728 13:49:29.108"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.092" endtime="20200728 13:49:29.108"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:26.537" endtime="20200728 13:49:29.108"></status>
+</kw>
+<kw name="Open contact page" library="IndexKeywords">
+<kw name="Click Contact Link" library="LandingPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>css:li#menu-item-2057 a</arg>
+</arguments>
+<msg timestamp="20200728 13:49:29.109" level="INFO">Clicking link 'css:li#menu-item-2057 a'.</msg>
+<status status="PASS" starttime="20200728 13:49:29.109" endtime="20200728 13:49:29.155"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.109" endtime="20200728 13:49:29.156"></status>
+</kw>
+<kw name="Verify Page Loaded" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Email Address</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:29.156" endtime="20200728 13:49:29.437"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.156" endtime="20200728 13:49:29.437"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.108" endtime="20200728 13:49:29.438"></status>
+</kw>
+<kw name="Enter name" library="IndexKeywords">
+<kw name="Enter Name" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_name_1</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:29.439" level="INFO">Typing text 'jonny' into text field 'id=et_pb_contact_name_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:29.439" endtime="20200728 13:49:29.569"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.438" endtime="20200728 13:49:29.569"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.438" endtime="20200728 13:49:29.569"></status>
+</kw>
+<kw name="Enter email" library="IndexKeywords">
+<kw name="Enter Email" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_email_1</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:29.570" level="INFO">Typing text 'jonny@fake.com' into text field 'id=et_pb_contact_email_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:29.570" endtime="20200728 13:49:29.684"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.570" endtime="20200728 13:49:29.684"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.569" endtime="20200728 13:49:29.684"></status>
+</kw>
+<kw name="Enter title" library="IndexKeywords">
+<kw name="Enter Title" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_title_1</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:29.685" level="INFO">Typing text 'Form Test' into text field 'id=et_pb_contact_title_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:29.685" endtime="20200728 13:49:29.785"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.685" endtime="20200728 13:49:29.785"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.684" endtime="20200728 13:49:29.786"></status>
+</kw>
+<kw name="Enter message" library="IndexKeywords">
+<kw name="Enter Message" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_message_1</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:29.788" level="INFO">Typing text 'I am testing out this form by filling in each field.' into text field 'id=et_pb_contact_message_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:29.787" endtime="20200728 13:49:30.122"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.787" endtime="20200728 13:49:30.122"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:29.786" endtime="20200728 13:49:30.122"></status>
+</kw>
+<kw name="End Web Test" library="CommonKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 13:49:30.123" endtime="20200728 13:49:30.138"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:30.123" endtime="20200728 13:49:30.139"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:24.787" endtime="20200728 13:49:30.139" critical="yes"></status>
+</test>
+<test id="s1-t4" name="User can't submit form with all empty fields">
+<kw name="Begin Web Test" library="CommonKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:30.143" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200728 13:49:30.143" endtime="20200728 13:49:31.841"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200728 13:49:31.841" endtime="20200728 13:49:31.869"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:30.142" endtime="20200728 13:49:31.869"></status>
+</kw>
+<kw name="Open home page" library="IndexKeywords">
+<tags>
+<tag>Smoke</tag>
+</tags>
+<kw name="Open Web Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:31.871" level="INFO">Opening url 'http://www.robotframeworktutorial.com/'</msg>
+<status status="PASS" starttime="20200728 13:49:31.871" endtime="20200728 13:49:34.317"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:31.870" endtime="20200728 13:49:34.317"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contact</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:34.318" endtime="20200728 13:49:34.333"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.317" endtime="20200728 13:49:34.333"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:31.870" endtime="20200728 13:49:34.333"></status>
+</kw>
+<kw name="Open contact page" library="IndexKeywords">
+<kw name="Click Contact Link" library="LandingPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>css:li#menu-item-2057 a</arg>
+</arguments>
+<msg timestamp="20200728 13:49:34.336" level="INFO">Clicking link 'css:li#menu-item-2057 a'.</msg>
+<status status="PASS" starttime="20200728 13:49:34.335" endtime="20200728 13:49:34.381"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.334" endtime="20200728 13:49:34.381"></status>
+</kw>
+<kw name="Verify Page Loaded" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Email Address</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:34.382" endtime="20200728 13:49:34.636"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.381" endtime="20200728 13:49:34.636"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.334" endtime="20200728 13:49:34.636"></status>
+</kw>
+<kw name="Submit form" library="IndexKeywords">
+<kw name="Submit Contact Form" library="ContactPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Submit</arg>
+</arguments>
+<msg timestamp="20200728 13:49:34.638" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" starttime="20200728 13:49:34.637" endtime="20200728 13:49:34.800"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.637" endtime="20200728 13:49:34.800"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.636" endtime="20200728 13:49:34.801"></status>
+</kw>
+<kw name="Confirm validation message" library="IndexKeywords">
+<kw name="Verify Form Validation Message" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Please, fill in the following fields</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:34.802" endtime="20200728 13:49:34.831"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.801" endtime="20200728 13:49:34.831"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.801" endtime="20200728 13:49:34.831"></status>
+</kw>
+<kw name="End Web Test" library="CommonKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 13:49:34.833" endtime="20200728 13:49:34.843"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.832" endtime="20200728 13:49:34.843"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:30.140" endtime="20200728 13:49:34.844" critical="yes"></status>
+</test>
+<test id="s1-t5" name="User can't submit form with empty name field">
+<kw name="Begin Web Test" library="CommonKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:34.849" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200728 13:49:34.848" endtime="20200728 13:49:36.556"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200728 13:49:36.557" endtime="20200728 13:49:36.586"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.847" endtime="20200728 13:49:36.587"></status>
+</kw>
+<kw name="Open home page" library="IndexKeywords">
+<tags>
+<tag>Smoke</tag>
+</tags>
+<kw name="Open Web Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:36.588" level="INFO">Opening url 'http://www.robotframeworktutorial.com/'</msg>
+<status status="PASS" starttime="20200728 13:49:36.588" endtime="20200728 13:49:39.443"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:36.588" endtime="20200728 13:49:39.443"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contact</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:39.444" endtime="20200728 13:49:39.459"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:39.443" endtime="20200728 13:49:39.459"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:36.587" endtime="20200728 13:49:39.459"></status>
+</kw>
+<kw name="Open contact page" library="IndexKeywords">
+<kw name="Click Contact Link" library="LandingPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>css:li#menu-item-2057 a</arg>
+</arguments>
+<msg timestamp="20200728 13:49:39.460" level="INFO">Clicking link 'css:li#menu-item-2057 a'.</msg>
+<status status="PASS" starttime="20200728 13:49:39.460" endtime="20200728 13:49:39.507"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:39.460" endtime="20200728 13:49:39.507"></status>
+</kw>
+<kw name="Verify Page Loaded" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Email Address</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:39.508" endtime="20200728 13:49:39.789"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:39.507" endtime="20200728 13:49:39.789"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:39.460" endtime="20200728 13:49:39.789"></status>
+</kw>
+<kw name="Enter email" library="IndexKeywords">
+<kw name="Enter Email" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_email_1</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:39.791" level="INFO">Typing text 'jonny@fake.com' into text field 'id=et_pb_contact_email_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:39.790" endtime="20200728 13:49:39.966"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:39.790" endtime="20200728 13:49:39.966"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:39.789" endtime="20200728 13:49:39.967"></status>
+</kw>
+<kw name="Enter title" library="IndexKeywords">
+<kw name="Enter Title" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_title_1</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:39.968" level="INFO">Typing text 'Form Test' into text field 'id=et_pb_contact_title_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:39.967" endtime="20200728 13:49:40.066"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:39.967" endtime="20200728 13:49:40.066"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:39.967" endtime="20200728 13:49:40.066"></status>
+</kw>
+<kw name="Enter message" library="IndexKeywords">
+<kw name="Enter Message" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_message_1</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:40.068" level="INFO">Typing text 'I am testing out this form by filling in each field.' into text field 'id=et_pb_contact_message_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:40.067" endtime="20200728 13:49:40.427"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:40.067" endtime="20200728 13:49:40.427"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:40.067" endtime="20200728 13:49:40.427"></status>
+</kw>
+<kw name="Submit form" library="IndexKeywords">
+<kw name="Submit Contact Form" library="ContactPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Submit</arg>
+</arguments>
+<msg timestamp="20200728 13:49:40.429" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" starttime="20200728 13:49:40.429" endtime="20200728 13:49:40.486"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:40.428" endtime="20200728 13:49:40.486"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:40.428" endtime="20200728 13:49:40.486"></status>
+</kw>
+<kw name="Confirm validation message" library="IndexKeywords">
+<kw name="Verify Form Validation Message" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Please, fill in the following fields</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:40.488" endtime="20200728 13:49:40.504"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:40.487" endtime="20200728 13:49:40.504"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:40.487" endtime="20200728 13:49:40.504"></status>
+</kw>
+<kw name="End Web Test" library="CommonKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 13:49:40.505" endtime="20200728 13:49:40.521"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:40.505" endtime="20200728 13:49:40.522"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:34.845" endtime="20200728 13:49:40.522" critical="yes"></status>
+</test>
+<test id="s1-t6" name="User can't submit form with empty email field">
+<kw name="Begin Web Test" library="CommonKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:40.526" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200728 13:49:40.526" endtime="20200728 13:49:42.212"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200728 13:49:42.213" endtime="20200728 13:49:42.240"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:40.525" endtime="20200728 13:49:42.241"></status>
+</kw>
+<kw name="Open home page" library="IndexKeywords">
+<tags>
+<tag>Smoke</tag>
+</tags>
+<kw name="Open Web Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:42.243" level="INFO">Opening url 'http://www.robotframeworktutorial.com/'</msg>
+<status status="PASS" starttime="20200728 13:49:42.242" endtime="20200728 13:49:44.695"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:42.242" endtime="20200728 13:49:44.695"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contact</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:44.696" endtime="20200728 13:49:44.712"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:44.696" endtime="20200728 13:49:44.713"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:42.241" endtime="20200728 13:49:44.713"></status>
+</kw>
+<kw name="Open contact page" library="IndexKeywords">
+<kw name="Click Contact Link" library="LandingPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>css:li#menu-item-2057 a</arg>
+</arguments>
+<msg timestamp="20200728 13:49:44.714" level="INFO">Clicking link 'css:li#menu-item-2057 a'.</msg>
+<status status="PASS" starttime="20200728 13:49:44.714" endtime="20200728 13:49:44.759"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:44.714" endtime="20200728 13:49:44.760"></status>
+</kw>
+<kw name="Verify Page Loaded" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Email Address</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:44.760" endtime="20200728 13:49:45.028"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:44.760" endtime="20200728 13:49:45.028"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:44.713" endtime="20200728 13:49:45.029"></status>
+</kw>
+<kw name="Enter name" library="IndexKeywords">
+<kw name="Enter Name" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_name_1</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:45.031" level="INFO">Typing text 'jonny' into text field 'id=et_pb_contact_name_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:45.030" endtime="20200728 13:49:45.156"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.030" endtime="20200728 13:49:45.156"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.029" endtime="20200728 13:49:45.156"></status>
+</kw>
+<kw name="Enter title" library="IndexKeywords">
+<kw name="Enter Title" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_title_1</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:45.157" level="INFO">Typing text 'Form Test' into text field 'id=et_pb_contact_title_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:45.157" endtime="20200728 13:49:45.240"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.157" endtime="20200728 13:49:45.240"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.156" endtime="20200728 13:49:45.240"></status>
+</kw>
+<kw name="Enter message" library="IndexKeywords">
+<kw name="Enter Message" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_message_1</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:45.242" level="INFO">Typing text 'I am testing out this form by filling in each field.' into text field 'id=et_pb_contact_message_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:45.242" endtime="20200728 13:49:45.577"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.241" endtime="20200728 13:49:45.577"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.241" endtime="20200728 13:49:45.577"></status>
+</kw>
+<kw name="Submit form" library="IndexKeywords">
+<kw name="Submit Contact Form" library="ContactPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Submit</arg>
+</arguments>
+<msg timestamp="20200728 13:49:45.578" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" starttime="20200728 13:49:45.578" endtime="20200728 13:49:45.638"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.578" endtime="20200728 13:49:45.638"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.577" endtime="20200728 13:49:45.638"></status>
+</kw>
+<kw name="Confirm validation message" library="IndexKeywords">
+<kw name="Verify Form Validation Message" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Please, fill in the following fields</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:45.641" endtime="20200728 13:49:45.648"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.640" endtime="20200728 13:49:45.648"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.639" endtime="20200728 13:49:45.649"></status>
+</kw>
+<kw name="End Web Test" library="CommonKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 13:49:45.652" endtime="20200728 13:49:45.669"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.650" endtime="20200728 13:49:45.670"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:40.523" endtime="20200728 13:49:45.670" critical="yes"></status>
+</test>
+<test id="s1-t7" name="User can't submit form with empty title field">
+<kw name="Begin Web Test" library="CommonKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:45.674" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200728 13:49:45.674" endtime="20200728 13:49:47.372"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200728 13:49:47.373" endtime="20200728 13:49:47.402"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.673" endtime="20200728 13:49:47.403"></status>
+</kw>
+<kw name="Open home page" library="IndexKeywords">
+<tags>
+<tag>Smoke</tag>
+</tags>
+<kw name="Open Web Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:47.404" level="INFO">Opening url 'http://www.robotframeworktutorial.com/'</msg>
+<status status="PASS" starttime="20200728 13:49:47.404" endtime="20200728 13:49:49.958"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:47.404" endtime="20200728 13:49:49.959"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contact</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:49.960" endtime="20200728 13:49:49.975"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:49.959" endtime="20200728 13:49:49.976"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:47.403" endtime="20200728 13:49:49.976"></status>
+</kw>
+<kw name="Open contact page" library="IndexKeywords">
+<kw name="Click Contact Link" library="LandingPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>css:li#menu-item-2057 a</arg>
+</arguments>
+<msg timestamp="20200728 13:49:49.977" level="INFO">Clicking link 'css:li#menu-item-2057 a'.</msg>
+<status status="PASS" starttime="20200728 13:49:49.977" endtime="20200728 13:49:50.037"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:49.977" endtime="20200728 13:49:50.037"></status>
+</kw>
+<kw name="Verify Page Loaded" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Email Address</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:50.038" endtime="20200728 13:49:50.304"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.037" endtime="20200728 13:49:50.305"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:49.976" endtime="20200728 13:49:50.305"></status>
+</kw>
+<kw name="Enter name" library="IndexKeywords">
+<kw name="Enter Name" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_name_1</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:50.307" level="INFO">Typing text 'jonny' into text field 'id=et_pb_contact_name_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:50.307" endtime="20200728 13:49:50.449"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.306" endtime="20200728 13:49:50.449"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.305" endtime="20200728 13:49:50.449"></status>
+</kw>
+<kw name="Enter email" library="IndexKeywords">
+<kw name="Enter Email" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_email_1</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:50.451" level="INFO">Typing text 'jonny@fake.com' into text field 'id=et_pb_contact_email_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:50.451" endtime="20200728 13:49:50.567"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.450" endtime="20200728 13:49:50.567"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.450" endtime="20200728 13:49:50.567"></status>
+</kw>
+<kw name="Enter message" library="IndexKeywords">
+<kw name="Enter Message" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_message_1</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:50.568" level="INFO">Typing text 'I am testing out this form by filling in each field.' into text field 'id=et_pb_contact_message_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:50.568" endtime="20200728 13:49:50.902"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.568" endtime="20200728 13:49:50.902"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.567" endtime="20200728 13:49:50.902"></status>
+</kw>
+<kw name="Submit form" library="IndexKeywords">
+<kw name="Submit Contact Form" library="ContactPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Submit</arg>
+</arguments>
+<msg timestamp="20200728 13:49:50.903" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" starttime="20200728 13:49:50.903" endtime="20200728 13:49:50.970"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.903" endtime="20200728 13:49:50.970"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.903" endtime="20200728 13:49:50.971"></status>
+</kw>
+<kw name="Confirm validation message" library="IndexKeywords">
+<kw name="Verify Form Validation Message" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Please, fill in the following fields</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:50.972" endtime="20200728 13:49:50.982"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.972" endtime="20200728 13:49:50.983"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.971" endtime="20200728 13:49:50.984"></status>
+</kw>
+<kw name="End Web Test" library="CommonKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 13:49:50.986" endtime="20200728 13:49:50.998"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:50.985" endtime="20200728 13:49:50.999"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:45.672" endtime="20200728 13:49:50.999" critical="yes"></status>
+</test>
+<test id="s1-t8" name="User can't submit form with empty message field">
+<kw name="Begin Web Test" library="CommonKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:51.003" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200728 13:49:51.002" endtime="20200728 13:49:52.694"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200728 13:49:52.695" endtime="20200728 13:49:52.722"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:51.001" endtime="20200728 13:49:52.722"></status>
+</kw>
+<kw name="Open home page" library="IndexKeywords">
+<tags>
+<tag>Smoke</tag>
+</tags>
+<kw name="Open Web Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:52.724" level="INFO">Opening url 'http://www.robotframeworktutorial.com/'</msg>
+<status status="PASS" starttime="20200728 13:49:52.724" endtime="20200728 13:49:55.342"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:52.724" endtime="20200728 13:49:55.342"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contact</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:55.343" endtime="20200728 13:49:55.358"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:55.342" endtime="20200728 13:49:55.359"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:52.723" endtime="20200728 13:49:55.359"></status>
+</kw>
+<kw name="Open contact page" library="IndexKeywords">
+<kw name="Click Contact Link" library="LandingPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>css:li#menu-item-2057 a</arg>
+</arguments>
+<msg timestamp="20200728 13:49:55.360" level="INFO">Clicking link 'css:li#menu-item-2057 a'.</msg>
+<status status="PASS" starttime="20200728 13:49:55.360" endtime="20200728 13:49:55.405"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:55.359" endtime="20200728 13:49:55.405"></status>
+</kw>
+<kw name="Verify Page Loaded" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Email Address</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:55.406" endtime="20200728 13:49:55.702"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:55.405" endtime="20200728 13:49:55.702"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:55.359" endtime="20200728 13:49:55.703"></status>
+</kw>
+<kw name="Enter name" library="IndexKeywords">
+<kw name="Enter Name" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_name_1</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:55.705" level="INFO">Typing text 'jonny' into text field 'id=et_pb_contact_name_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:55.704" endtime="20200728 13:49:55.824"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:55.704" endtime="20200728 13:49:55.825"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:55.703" endtime="20200728 13:49:55.825"></status>
+</kw>
+<kw name="Enter email" library="IndexKeywords">
+<kw name="Enter Email" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_email_1</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:55.826" level="INFO">Typing text 'jonny@fake.com' into text field 'id=et_pb_contact_email_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:55.826" endtime="20200728 13:49:55.933"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:55.826" endtime="20200728 13:49:55.933"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:55.825" endtime="20200728 13:49:55.933"></status>
+</kw>
+<kw name="Enter title" library="IndexKeywords">
+<kw name="Enter Title" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_title_1</arg>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:55.934" level="INFO">Typing text 'Form Test' into text field 'id=et_pb_contact_title_1'.</msg>
+<status status="PASS" starttime="20200728 13:49:55.934" endtime="20200728 13:49:56.023"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:55.934" endtime="20200728 13:49:56.023"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:55.934" endtime="20200728 13:49:56.023"></status>
+</kw>
+<kw name="Submit form" library="IndexKeywords">
+<kw name="Submit Contact Form" library="ContactPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Submit</arg>
+</arguments>
+<msg timestamp="20200728 13:49:56.025" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" starttime="20200728 13:49:56.024" endtime="20200728 13:49:56.069"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:56.024" endtime="20200728 13:49:56.069"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:56.024" endtime="20200728 13:49:56.070"></status>
+</kw>
+<kw name="Confirm validation message" library="IndexKeywords">
+<kw name="Verify Form Validation Message" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Please, fill in the following fields</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:49:56.071" endtime="20200728 13:49:56.080"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:56.070" endtime="20200728 13:49:56.081"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:56.070" endtime="20200728 13:49:56.081"></status>
+</kw>
+<kw name="End Web Test" library="CommonKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 13:49:56.082" endtime="20200728 13:49:56.101"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:56.082" endtime="20200728 13:49:56.101"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:51.000" endtime="20200728 13:49:56.101" critical="yes"></status>
+</test>
+<test id="s1-t9" name="User must enter a valid email">
+<kw name="Begin Web Test" library="CommonKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:56.106" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200728 13:49:56.105" endtime="20200728 13:49:57.791"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200728 13:49:57.791" endtime="20200728 13:49:57.818"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:56.104" endtime="20200728 13:49:57.819"></status>
+</kw>
+<kw name="Open home page" library="IndexKeywords">
+<tags>
+<tag>Smoke</tag>
+</tags>
+<kw name="Open Web Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200728 13:49:57.821" level="INFO">Opening url 'http://www.robotframeworktutorial.com/'</msg>
+<status status="PASS" starttime="20200728 13:49:57.820" endtime="20200728 13:50:00.349"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:57.820" endtime="20200728 13:50:00.349"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contact</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:50:00.350" endtime="20200728 13:50:00.367"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.349" endtime="20200728 13:50:00.368"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:49:57.819" endtime="20200728 13:50:00.368"></status>
+</kw>
+<kw name="Open contact page" library="IndexKeywords">
+<kw name="Click Contact Link" library="LandingPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>css:li#menu-item-2057 a</arg>
+</arguments>
+<msg timestamp="20200728 13:50:00.369" level="INFO">Clicking link 'css:li#menu-item-2057 a'.</msg>
+<status status="PASS" starttime="20200728 13:50:00.369" endtime="20200728 13:50:00.416"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.368" endtime="20200728 13:50:00.416"></status>
+</kw>
+<kw name="Verify Page Loaded" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Email Address</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:50:00.417" endtime="20200728 13:50:00.692"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.416" endtime="20200728 13:50:00.692"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.368" endtime="20200728 13:50:00.692"></status>
+</kw>
+<kw name="Enter invalid email" library="IndexKeywords">
+<kw name="Enter Invalid Email" library="ContactPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=et_pb_contact_email_1</arg>
+<arg>${invalidEmail}</arg>
+</arguments>
+<msg timestamp="20200728 13:50:00.694" level="INFO">Typing text 'adsf' into text field 'id=et_pb_contact_email_1'.</msg>
+<status status="PASS" starttime="20200728 13:50:00.694" endtime="20200728 13:50:00.819"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.693" endtime="20200728 13:50:00.819"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.693" endtime="20200728 13:50:00.819"></status>
+</kw>
+<kw name="Submit form" library="IndexKeywords">
+<kw name="Submit Contact Form" library="ContactPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Submit</arg>
+</arguments>
+<msg timestamp="20200728 13:50:00.820" level="INFO">Clicking button 'Submit'.</msg>
+<status status="PASS" starttime="20200728 13:50:00.820" endtime="20200728 13:50:00.868"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.820" endtime="20200728 13:50:00.868"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.819" endtime="20200728 13:50:00.868"></status>
+</kw>
+<kw name="Confirm email validation message" library="IndexKeywords">
+<kw name="Verify Email Validation Message" library="ContactPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Please, fix the following errors:</arg>
+</arguments>
+<status status="PASS" starttime="20200728 13:50:00.870" endtime="20200728 13:50:00.884"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.869" endtime="20200728 13:50:00.885"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.869" endtime="20200728 13:50:00.885"></status>
+</kw>
+<kw name="End Web Test" library="CommonKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 13:50:00.886" endtime="20200728 13:50:00.910"></status>
+</kw>
+<status status="PASS" starttime="20200728 13:50:00.886" endtime="20200728 13:50:00.910"></status>
+</kw>
+<tags>
+<tag>Email</tag>
+</tags>
+<status status="PASS" starttime="20200728 13:49:56.103" endtime="20200728 13:50:00.910" critical="yes"></status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="PASS" starttime="20200728 13:49:10.201" endtime="20200728 13:50:00.915"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0">Critical Tests</stat>
+<stat pass="9" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Basic</stat>
+<stat pass="1" fail="0">Email</stat>
+</tag>
+<suite>
+<stat pass="9" fail="0" id="s1" name="Index">Index</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
